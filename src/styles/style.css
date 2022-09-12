@@ -1,0 +1,30 @@
+
+.btn{
+    -fx-background-radius: 15px;
+    -fx-background-color: linear-gradient(to left top,#6C5CE7,#3498DB);
+
+}
+.cmb{
+    -fx-font-size: 18px;
+    -fx-font-family: "Roboto Medium";
+}
+.cancleBtn{
+    -fx-background-radius: 5px;
+    -fx-background-color: linear-gradient(to left top,#cb2d3e,#ef473a);
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.loginBtn{
+    -fx-background-radius: 5px;
+    -fx-background-color: linear-gradient(to left top,#396afc,#2948ff);
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.popUp{
+
+}
+.Label1 {
+    -fx-text-alignment: center;
+}

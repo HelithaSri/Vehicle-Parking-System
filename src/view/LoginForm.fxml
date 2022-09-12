@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logInContext" prefHeight="340.0" prefWidth="600.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Rectangle height="39.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#021b79" />
+                  <Stop color="#021b79" offset="0.007662835249042145" />
+                  <Stop color="#0575e6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <ImageView fitHeight="50.0" fitWidth="283.0" layoutX="274.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/user_circle.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtfldUserName" labelFloat="true" layoutX="205.0" layoutY="137.0" prefHeight="25.0" prefWidth="186.0" promptText="User Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtfldPassword" labelFloat="true" layoutX="205.0" layoutY="210.0" prefHeight="25.0" prefWidth="186.0" promptText="Password">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="211.0" layoutY="283.0" onAction="#closeButtonAction" prefHeight="35.0" prefWidth="80.0" styleClass="cancleBtn" text="Cancle" />
+      <JFXButton fx:id="loginBtnId" buttonType="RAISED" layoutX="305.0" layoutY="283.0" onAction="#loginBtn" prefHeight="35.0" prefWidth="80.0" styleClass="loginBtn" text="Log In" />
+      <Label layoutX="21.0" layoutY="7.0" style="-fx-text-fill: white;" text="Log In">
+         <font>
+            <Font name="Roboto Black" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="cancleBtn" layoutX="563.0" layoutY="6.0" onAction="#cancleBtnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: red;" textFill="WHITE" textOverrun="CLIP" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="563.0" layoutY="6.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/close.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="attemptsLbl" layoutX="219.0" layoutY="250.0" prefHeight="16.0" prefWidth="160.0" textFill="RED" />
+   </children>
+</AnchorPane>

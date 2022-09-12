@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="635.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementFormController">
+   <children>
+      <Rectangle height="75.0" layoutX="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1008.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#021b79" />
+                  <Stop color="#0575e6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="50.0" layoutY="19.0" text="Parking System" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbId" labelFloat="true" layoutX="51.0" layoutY="106.0" onAction="#cmbAction" prefHeight="44.0" prefWidth="225.0" />
+      <JFXButton layoutX="458.0" layoutY="87.0" onAction="#addVehicleAction" prefHeight="65.0" prefWidth="150.0" styleClass="loginBtn" stylesheets="@../styles/style.css" text="Add Vehicle" />
+      <JFXButton layoutX="636.0" layoutY="87.0" onAction="#addDriverAction" prefHeight="65.0" prefWidth="150.0" styleClass="loginBtn" stylesheets="@../styles/style.css" text="Add Driver" />
+      <JFXButton fx:id="logOut" layoutX="816.0" layoutY="87.0" onAction="#logOutBtn" prefHeight="65.0" prefWidth="150.0" styleClass="loginBtn" stylesheets="@../styles/style.css" text="Log Out" />
+      <AnchorPane fx:id="tableContext" layoutY="167.0" prefHeight="468.0" prefWidth="1001.0">
+         <children>
+            <TableView fx:id="vehicleId" layoutX="5.0" layoutY="4.0" prefHeight="460.0" prefWidth="991.0">
+               <columns>
+                  <TableColumn fx:id="vehicleNumber" prefWidth="188.00001335144043" text="Vehicle Number" />
+                  <TableColumn fx:id="vehicleTypes" prefWidth="246.99998474121094" text="Vehicle Type" />
+                  <TableColumn fx:id="vehicleParkingSlot" prefWidth="284.0" text="Parking Slot" />
+                  <TableColumn fx:id="vehicleParkedTime" prefWidth="271.0" text="Parked Time" />
+               </columns>
+            </TableView>
+            <TableView fx:id="deliveryTableId" layoutX="5.0" layoutY="4.0" prefHeight="460.0" prefWidth="991.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="deliveryVehicleNumber" prefWidth="188.00001335144043" text="Vehicle Number" />
+                  <TableColumn fx:id="deliveryVehicleType" prefWidth="246.99998474121094" text="Vehicle Type" />
+                  <TableColumn fx:id="deliveryVehicleName" prefWidth="284.0" text="Driver Name" />
+                  <TableColumn fx:id="deliveryLeftTime" prefWidth="271.0" text="Left Time" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
